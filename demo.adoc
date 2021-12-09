@@ -4,7 +4,7 @@
 
 = Angular + Auth0 Demo Steps
 
-If you're developing an Angular app today, you probably need a way to authenticate your users. That's where OpenID Connect (OIDC) comes in. OIDC is a layer on top of OAuth 2.0 that provides identity.
+If you're developing an Angular app today, you might need a way to authenticate your users. That's where OpenID Connect (OIDC) can help you. OIDC is a layer on top of OAuth 2.0 that provides identity.
 
 In this tutorial, I'll how you to add OIDC authentication with Auth0 to a new Angular app in just a few steps.
 
@@ -20,8 +20,6 @@ toc::[]
 
     npx @angular/cli@13 new auth0-demo --routing
 
-. Run `git init` and commit your changes.
-
 == Add Auth with OpenID Connect
 
 . Install the https://github.com/auth0/auth0-cli#installation[Auth0 CLI] and run `auth0 login` to register your account.
@@ -32,15 +30,12 @@ toc::[]
 
 . Use https://github.com/oktadev/schematics#angular--auth0[OktaDev Schematics] to add OAuth 2.0 and OIDC support to your Angular app.
 
-----
-cd auth0-demo
-ng add @oktadev/schematics --auth0
-----
+    ng add @oktadev/schematics --auth0
 
 . View changes using `git diff` or in https://github.com/oktadev/auth0-angular-example/pull/1/files[this pull request].
 
-=== Use the Auth0 Console instead of the CLI
-
+.Use the Auth0 Console instead of the CLI
+****
 You can also use the Auth0 Console to create an OIDC app:
 
 * https://auth0.com/auth/login[Log in] to Auth0 or https://auth0.com/signup[create an account] if you don't have one. Go to **Applications** > **Create Application**.
@@ -48,12 +43,13 @@ You can also use the Auth0 Console to create an OIDC app:
 * Click **Angular**, then the **Settings** tab.
 * Add `http://localhost:4200/home` as an Allowed Callback URL and `http://localhost:4200` as a Logout URL.
 * Specify `http://localhost:4200` as an Allowed Origin and click **Save Changes** at the bottom.
+****
 
 === Test your Angular authentication flow
 
 . Run `ng serve` and you'll see a login button at `http://localhost:4200/home`.
 
-. Show Logout flow.
+. Show authentication flow.
 
 === Display the authenticated user's name
 
@@ -77,6 +73,8 @@ To display the authenticated user's name, you can use the `user$` observable on 
 
 == Angular FTW!
 
-🚀 Find the code on GitHub: https://github.com/oktadev/auth0-angular-example[@oktadev/auth0-angular-example]
+✅ Find the code on GitHub: https://github.com/oktadev/auth0-angular-example[@oktadev/auth0-angular-example]
+
+🚀 Check out my https://infoq.com/minibooks/angular-mini-book/[Angular Mini-Book]!
 
 
