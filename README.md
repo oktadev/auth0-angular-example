@@ -68,4 +68,4 @@ Please post any questions as comments on the [blog post][blog].
 
 Apache 2.0, see [LICENSE](LICENSE).
 
-[blog]: https://auth0.com/blog/angular-openid-connect-quickly/
+[blog]: https://auth0.com/blog/add-oidc-to-angular-apps-quickly/
